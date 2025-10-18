@@ -1,4 +1,4 @@
-# Indra Representation (NeurIPS 2025)
+# The Indra Representation Hypothesis (NeurIPS 2025)
 Code for the NeurIPS 2025 paper `The Indra Representation Hypothesis`.
 
 [Project page](https://jianglin954.github.io/Indra/)
