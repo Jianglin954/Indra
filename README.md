@@ -3,6 +3,7 @@ Code for the NeurIPS 2025 paper `The Indra Representation Hypothesis`.
 
 [Project page](https://jianglin954.github.io/Indra/)
 
+To be updated soon...
 
 ## Datasets
 
@@ -20,8 +21,6 @@ conda activate indra
 ```bash
 bash experiments.sh
 ```
-
-The experimental results will be saved in the corresponding *.log file.
 
 # Reference
 
