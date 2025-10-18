@@ -22,7 +22,7 @@ conda activate indra
 bash experiments.sh
 ```
 
-# Reference
+# References
 
     @inproceedings{Jianglin2025,
       title={The Indra Representation Hypothesis},
