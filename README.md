@@ -5,22 +5,42 @@ Code for the NeurIPS 2025 paper `The Indra Representation Hypothesis`.
 
 To be updated soon...
 
-## Datasets
-
-
 ## Installation
 ```bash
-conda create -n indra python=3.8
-conda activate indra
+bash setup_envir.sh
+```
 
+## Datasets
+### MS-COCO
+```bash
+cd src
+python download_MS_COCO.py
+unzip ../datasets/MS-COCO/val2017.zip -d ../datasets/MS-COCO/
+unzip ../datasets/MS-COCO/annotations_trainval2017.zip -d ../datasets/MS-COCO/
+```
+### NOCAPS
+```bash
+Download Validation Set Captions from https://nocaps.org/download
+save captions at ./datasets/NOCAPS/nocaps_val_4500_captions.json
+cd src
+python download_NOCAPS.py
 ```
 
 
-## Usage
+## Extract Features
 
 ```bash
-bash experiments.sh
+cd src
+bash extract_feats.sh
 ```
+
+## Run
+```bash
+cd src
+bash run_vlm.sh
+bash cifar.sh
+```
+
 
 # References
 
