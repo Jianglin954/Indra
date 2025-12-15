@@ -61,7 +61,3 @@ bash officehome.sh
       publisher={Association for Computational Linguistics},
       url={https://aclanthology.org/2025.emnlp-main.843/}
     }
-
-}
-
-
