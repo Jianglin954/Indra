@@ -1,5 +1,8 @@
 # The Indra Representation Hypothesis (NeurIPS 2025)
-Code for the NeurIPS 2025 paper `The Indra Representation Hypothesis`.
+Code for the NeurIPS 2025 paper [The Indra Representation Hypothesis](https://openreview.net/pdf/7a234a154428f618d6232f1a153278475a2e3b00.pdf).
+
+
+<img src="./figs/fig1.png">
 
 ## Installation
 ```bash
