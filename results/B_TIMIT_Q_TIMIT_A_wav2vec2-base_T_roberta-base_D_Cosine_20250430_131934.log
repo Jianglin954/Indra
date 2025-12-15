@@ -1,0 +1,50 @@
+---------------------------------
+Namespace(dist='Cosine', vid_model='wav2vec2-base', text_model='roberta-base', base_data='TIMIT', query_data='TIMIT', gpu=0, kkk=5)
+wav2vec2-base roberta-base
+text dimension 768 == img dimension 768!
+t2i_ori_score tensor(0.3190, device='cuda:0')
+i2t_ori_score tensor(0.0723, device='cuda:0')
+t2i_att_score tensor(0.4137, device='cuda:0')
+i2t_att_score tensor(0.5781, device='cuda:0')
+t2i_clip_score tensor(1.0621, device='cuda:0')
+i2t_clip_score tensor(1.8369, device='cuda:0')
+---------------------------------
+Namespace(dist='Cosine', vid_model='wav2vec2-base', text_model='roberta-base', base_data='TIMIT', query_data='TIMIT', gpu=0, kkk=10)
+wav2vec2-base roberta-base
+text dimension 768 == img dimension 768!
+t2i_ori_score tensor(0.6702, device='cuda:0')
+i2t_ori_score tensor(0.2763, device='cuda:0')
+t2i_att_score tensor(0.8199, device='cuda:0')
+i2t_att_score tensor(1.2092, device='cuda:0')
+t2i_clip_score tensor(2.0461, device='cuda:0')
+i2t_clip_score tensor(3.6113, device='cuda:0')
+---------------------------------
+Namespace(dist='Cosine', vid_model='wav2vec2-base', text_model='roberta-base', base_data='TIMIT', query_data='TIMIT', gpu=0, kkk=30)
+wav2vec2-base roberta-base
+text dimension 768 == img dimension 768!
+t2i_ori_score tensor(2.2143, device='cuda:0')
+i2t_ori_score tensor(1.4098, device='cuda:0')
+t2i_att_score tensor(2.5067, device='cuda:0')
+i2t_att_score tensor(2.9533, device='cuda:0')
+t2i_clip_score tensor(5.7267, device='cuda:0')
+i2t_clip_score tensor(10.1469, device='cuda:0')
+---------------------------------
+Namespace(dist='Cosine', vid_model='wav2vec2-base', text_model='roberta-base', base_data='TIMIT', query_data='TIMIT', gpu=0, kkk=50)
+wav2vec2-base roberta-base
+text dimension 768 == img dimension 768!
+t2i_ori_score tensor(3.6552, device='cuda:0')
+i2t_ori_score tensor(2.7506, device='cuda:0')
+t2i_att_score tensor(4.2258, device='cuda:0')
+i2t_att_score tensor(4.6924, device='cuda:0')
+t2i_clip_score tensor(9.2042, device='cuda:0')
+i2t_clip_score tensor(16.2253, device='cuda:0')
+---------------------------------
+Namespace(dist='Cosine', vid_model='wav2vec2-base', text_model='roberta-base', base_data='TIMIT', query_data='TIMIT', gpu=0, kkk=100)
+wav2vec2-base roberta-base
+text dimension 768 == img dimension 768!
+t2i_ori_score tensor(7.3258, device='cuda:0')
+i2t_ori_score tensor(6.4577, device='cuda:0')
+t2i_att_score tensor(8.0030, device='cuda:0')
+i2t_att_score tensor(10.0688, device='cuda:0')
+t2i_clip_score tensor(17.4574, device='cuda:0')
+i2t_clip_score tensor(30.3299, device='cuda:0')

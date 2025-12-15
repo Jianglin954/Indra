@@ -34,7 +34,9 @@ bash extract_feats.sh
 ```bash
 cd src
 bash run_vlm.sh
+bash run_alm.sh
 bash cifar.sh
+bash officehome.sh
 ```
 
 

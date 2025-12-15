@@ -1,0 +1,50 @@
+---------------------------------
+Namespace(dist='Cosine', vid_model='wav2vec2-large-robust', text_model='roberta-base', base_data='TIMIT', query_data='TIMIT', gpu=0, kkk=5)
+wav2vec2-large-robust roberta-base
+img dimension 1024 > text dimension 768! Using PCA for dimension reduction!
+t2i_ori_score tensor(0.4189, device='cuda:0')
+i2t_ori_score tensor(0.3084, device='cuda:0')
+t2i_att_score tensor(0.3639, device='cuda:0')
+i2t_att_score tensor(0.5781, device='cuda:0')
+t2i_clip_score tensor(1.0621, device='cuda:0')
+i2t_clip_score tensor(1.8369, device='cuda:0')
+---------------------------------
+Namespace(dist='Cosine', vid_model='wav2vec2-large-robust', text_model='roberta-base', base_data='TIMIT', query_data='TIMIT', gpu=0, kkk=10)
+wav2vec2-large-robust roberta-base
+img dimension 1024 > text dimension 768! Using PCA for dimension reduction!
+t2i_ori_score tensor(0.8649, device='cuda:0')
+i2t_ori_score tensor(0.6344, device='cuda:0')
+t2i_att_score tensor(0.9080, device='cuda:0')
+i2t_att_score tensor(1.2431, device='cuda:0')
+t2i_clip_score tensor(2.0461, device='cuda:0')
+i2t_clip_score tensor(3.6113, device='cuda:0')
+---------------------------------
+Namespace(dist='Cosine', vid_model='wav2vec2-large-robust', text_model='roberta-base', base_data='TIMIT', query_data='TIMIT', gpu=0, kkk=30)
+wav2vec2-large-robust roberta-base
+img dimension 1024 > text dimension 768! Using PCA for dimension reduction!
+t2i_ori_score tensor(2.5486, device='cuda:0')
+i2t_ori_score tensor(2.1948, device='cuda:0')
+t2i_att_score tensor(2.7839, device='cuda:0')
+i2t_att_score tensor(2.9561, device='cuda:0')
+t2i_clip_score tensor(5.7267, device='cuda:0')
+i2t_clip_score tensor(10.1469, device='cuda:0')
+---------------------------------
+Namespace(dist='Cosine', vid_model='wav2vec2-large-robust', text_model='roberta-base', base_data='TIMIT', query_data='TIMIT', gpu=0, kkk=50)
+wav2vec2-large-robust roberta-base
+img dimension 1024 > text dimension 768! Using PCA for dimension reduction!
+t2i_ori_score tensor(4.2006, device='cuda:0')
+i2t_ori_score tensor(3.7385, device='cuda:0')
+t2i_att_score tensor(4.6403, device='cuda:0')
+i2t_att_score tensor(4.3186, device='cuda:0')
+t2i_clip_score tensor(9.2042, device='cuda:0')
+i2t_clip_score tensor(16.2253, device='cuda:0')
+---------------------------------
+Namespace(dist='Cosine', vid_model='wav2vec2-large-robust', text_model='roberta-base', base_data='TIMIT', query_data='TIMIT', gpu=0, kkk=100)
+wav2vec2-large-robust roberta-base
+img dimension 1024 > text dimension 768! Using PCA for dimension reduction!
+t2i_ori_score tensor(8.3377, device='cuda:0')
+i2t_ori_score tensor(7.3357, device='cuda:0')
+t2i_att_score tensor(8.5689, device='cuda:0')
+i2t_att_score tensor(9.8393, device='cuda:0')
+t2i_clip_score tensor(17.4574, device='cuda:0')
+i2t_clip_score tensor(30.3299, device='cuda:0')
