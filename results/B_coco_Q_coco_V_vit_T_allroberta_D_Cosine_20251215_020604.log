@@ -1,0 +1,72 @@
+---------------------------------
+Namespace(dist='Cosine', vid_model='vit', text_model='allroberta', base_data='coco', query_data='coco', gpu=0, kkk=5)
+vit allroberta
+text dimension 1024 > img dimension 768! Using PCA for dimension reduction!
+tensor(0., device='cuda:0')
+True
+__________orig ________________
+t2i_ori_score tensor(0.4858, device='cuda:0')
+i2t_ori_score tensor(0.4922, device='cuda:0')
+__________cca ________________
+t2i_ori_cca tensor(0.5120, device='cuda:0')
+i2t_ori_cca tensor(0.4896, device='cuda:0')
+__________ours ________________
+t2i_att_score tensor(1.0488, device='cuda:0')
+i2t_att_score tensor(0.8807, device='cuda:0')
+__________clip ________________
+t2i_clip_score tensor(1.4209, device='cuda:0')
+i2t_clip_score tensor(1.3812, device='cuda:0')
+---------------------------------
+Namespace(dist='Cosine', vid_model='vit', text_model='allroberta', base_data='coco', query_data='coco', gpu=0, kkk=10)
+vit allroberta
+text dimension 1024 > img dimension 768! Using PCA for dimension reduction!
+tensor(0., device='cuda:0')
+True
+__________orig ________________
+t2i_ori_score tensor(0.9703, device='cuda:0')
+i2t_ori_score tensor(0.9809, device='cuda:0')
+__________cca ________________
+t2i_ori_cca tensor(1.0191, device='cuda:0')
+i2t_ori_cca tensor(0.9891, device='cuda:0')
+__________ours ________________
+t2i_att_score tensor(2.0651, device='cuda:0')
+i2t_att_score tensor(1.7496, device='cuda:0')
+__________clip ________________
+t2i_clip_score tensor(2.7341, device='cuda:0')
+i2t_clip_score tensor(2.6610, device='cuda:0')
+---------------------------------
+Namespace(dist='Cosine', vid_model='vit', text_model='allroberta', base_data='coco', query_data='coco', gpu=0, kkk=30)
+vit allroberta
+text dimension 1024 > img dimension 768! Using PCA for dimension reduction!
+tensor(0., device='cuda:0')
+True
+__________orig ________________
+t2i_ori_score tensor(2.9113, device='cuda:0')
+i2t_ori_score tensor(2.9258, device='cuda:0')
+__________cca ________________
+t2i_ori_cca tensor(3.0160, device='cuda:0')
+i2t_ori_cca tensor(2.9745, device='cuda:0')
+__________ours ________________
+t2i_att_score tensor(5.9705, device='cuda:0')
+i2t_att_score tensor(5.1492, device='cuda:0')
+__________clip ________________
+t2i_clip_score tensor(7.6345, device='cuda:0')
+i2t_clip_score tensor(7.4703, device='cuda:0')
+---------------------------------
+Namespace(dist='Cosine', vid_model='vit', text_model='allroberta', base_data='coco', query_data='coco', gpu=0, kkk=50)
+vit allroberta
+text dimension 1024 > img dimension 768! Using PCA for dimension reduction!
+tensor(0., device='cuda:0')
+True
+__________orig ________________
+t2i_ori_score tensor(4.8526, device='cuda:0')
+i2t_ori_score tensor(4.8752, device='cuda:0')
+__________cca ________________
+t2i_ori_cca tensor(4.9956, device='cuda:0')
+i2t_ori_cca tensor(4.9670, device='cuda:0')
+__________ours ________________
+t2i_att_score tensor(9.7025, device='cuda:0')
+i2t_att_score tensor(8.4462, device='cuda:0')
+__________clip ________________
+t2i_clip_score tensor(12.2125, device='cuda:0')
+i2t_clip_score tensor(11.9866, device='cuda:0')

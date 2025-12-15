@@ -1,0 +1,72 @@
+---------------------------------
+Namespace(dist='Cosine', vid_model='convnext', text_model='allroberta', base_data='nocaps', query_data='nocaps', gpu=0, kkk=5)
+convnext allroberta
+text dimension 1024 == img dimension 1024!
+tensor(0., device='cuda:0')
+True
+__________orig ________________
+t2i_ori_score tensor(0.4725, device='cuda:0')
+i2t_ori_score tensor(0.4622, device='cuda:0')
+__________cca ________________
+t2i_ori_cca tensor(0.4774, device='cuda:0')
+i2t_ori_cca tensor(0.4717, device='cuda:0')
+__________ours ________________
+t2i_att_score tensor(0.7649, device='cuda:0')
+i2t_att_score tensor(0.5575, device='cuda:0')
+__________clip ________________
+t2i_clip_score tensor(1.3571, device='cuda:0')
+i2t_clip_score tensor(1.3257, device='cuda:0')
+---------------------------------
+Namespace(dist='Cosine', vid_model='convnext', text_model='allroberta', base_data='nocaps', query_data='nocaps', gpu=0, kkk=10)
+convnext allroberta
+text dimension 1024 == img dimension 1024!
+tensor(0., device='cuda:0')
+True
+__________orig ________________
+t2i_ori_score tensor(0.9448, device='cuda:0')
+i2t_ori_score tensor(0.9260, device='cuda:0')
+__________cca ________________
+t2i_ori_cca tensor(0.9550, device='cuda:0')
+i2t_ori_cca tensor(0.9496, device='cuda:0')
+__________ours ________________
+t2i_att_score tensor(1.4721, device='cuda:0')
+i2t_att_score tensor(1.1024, device='cuda:0')
+__________clip ________________
+t2i_clip_score tensor(2.5565, device='cuda:0')
+i2t_clip_score tensor(2.4994, device='cuda:0')
+---------------------------------
+Namespace(dist='Cosine', vid_model='convnext', text_model='allroberta', base_data='nocaps', query_data='nocaps', gpu=0, kkk=30)
+convnext allroberta
+text dimension 1024 == img dimension 1024!
+tensor(0., device='cuda:0')
+True
+__________orig ________________
+t2i_ori_score tensor(2.8333, device='cuda:0')
+i2t_ori_score tensor(2.7816, device='cuda:0')
+__________cca ________________
+t2i_ori_cca tensor(2.8656, device='cuda:0')
+i2t_ori_cca tensor(2.8580, device='cuda:0')
+__________ours ________________
+t2i_att_score tensor(4.0798, device='cuda:0')
+i2t_att_score tensor(3.3385, device='cuda:0')
+__________clip ________________
+t2i_clip_score tensor(6.8603, device='cuda:0')
+i2t_clip_score tensor(6.7170, device='cuda:0')
+---------------------------------
+Namespace(dist='Cosine', vid_model='convnext', text_model='allroberta', base_data='nocaps', query_data='nocaps', gpu=0, kkk=50)
+convnext allroberta
+text dimension 1024 == img dimension 1024!
+tensor(0., device='cuda:0')
+True
+__________orig ________________
+t2i_ori_score tensor(4.7212, device='cuda:0')
+i2t_ori_score tensor(4.6473, device='cuda:0')
+__________cca ________________
+t2i_ori_cca tensor(4.7912, device='cuda:0')
+i2t_ori_cca tensor(4.7574, device='cuda:0')
+__________ours ________________
+t2i_att_score tensor(6.4945, device='cuda:0')
+i2t_att_score tensor(5.5261, device='cuda:0')
+__________clip ________________
+t2i_clip_score tensor(10.7958, device='cuda:0')
+i2t_clip_score tensor(10.5848, device='cuda:0')

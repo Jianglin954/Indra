@@ -1,0 +1,72 @@
+---------------------------------
+Namespace(dist='Cosine', vid_model='dinov2', text_model='bert', base_data='nocaps', query_data='nocaps', gpu=0, kkk=5)
+dinov2 bert
+text dimension 1024 == img dimension 1024!
+tensor(0., device='cuda:0')
+True
+__________orig ________________
+t2i_ori_score tensor(0.4655, device='cuda:0')
+i2t_ori_score tensor(0.4393, device='cuda:0')
+__________cca ________________
+t2i_ori_cca tensor(0.4843, device='cuda:0')
+i2t_ori_cca tensor(0.4852, device='cuda:0')
+__________ours ________________
+t2i_att_score tensor(0.5668, device='cuda:0')
+i2t_att_score tensor(0.4857, device='cuda:0')
+__________clip ________________
+t2i_clip_score tensor(1.3571, device='cuda:0')
+i2t_clip_score tensor(1.3257, device='cuda:0')
+---------------------------------
+Namespace(dist='Cosine', vid_model='dinov2', text_model='bert', base_data='nocaps', query_data='nocaps', gpu=0, kkk=10)
+dinov2 bert
+text dimension 1024 == img dimension 1024!
+tensor(0., device='cuda:0')
+True
+__________orig ________________
+t2i_ori_score tensor(0.9282, device='cuda:0')
+i2t_ori_score tensor(0.8832, device='cuda:0')
+__________cca ________________
+t2i_ori_cca tensor(0.9663, device='cuda:0')
+i2t_ori_cca tensor(0.9725, device='cuda:0')
+__________ours ________________
+t2i_att_score tensor(1.0650, device='cuda:0')
+i2t_att_score tensor(0.9715, device='cuda:0')
+__________clip ________________
+t2i_clip_score tensor(2.5565, device='cuda:0')
+i2t_clip_score tensor(2.4994, device='cuda:0')
+---------------------------------
+Namespace(dist='Cosine', vid_model='dinov2', text_model='bert', base_data='nocaps', query_data='nocaps', gpu=0, kkk=30)
+dinov2 bert
+text dimension 1024 == img dimension 1024!
+tensor(0., device='cuda:0')
+True
+__________orig ________________
+t2i_ori_score tensor(2.7012, device='cuda:0')
+i2t_ori_score tensor(2.6746, device='cuda:0')
+__________cca ________________
+t2i_ori_cca tensor(2.8677, device='cuda:0')
+i2t_ori_cca tensor(2.9045, device='cuda:0')
+__________ours ________________
+t2i_att_score tensor(3.1795, device='cuda:0')
+i2t_att_score tensor(2.9075, device='cuda:0')
+__________clip ________________
+t2i_clip_score tensor(6.8603, device='cuda:0')
+i2t_clip_score tensor(6.7170, device='cuda:0')
+---------------------------------
+Namespace(dist='Cosine', vid_model='dinov2', text_model='bert', base_data='nocaps', query_data='nocaps', gpu=0, kkk=50)
+dinov2 bert
+text dimension 1024 == img dimension 1024!
+tensor(0., device='cuda:0')
+True
+__________orig ________________
+t2i_ori_score tensor(4.5000, device='cuda:0')
+i2t_ori_score tensor(4.4854, device='cuda:0')
+__________cca ________________
+t2i_ori_cca tensor(4.7799, device='cuda:0')
+i2t_ori_cca tensor(4.8079, device='cuda:0')
+__________ours ________________
+t2i_att_score tensor(5.2383, device='cuda:0')
+i2t_att_score tensor(4.8457, device='cuda:0')
+__________clip ________________
+t2i_clip_score tensor(10.7958, device='cuda:0')
+i2t_clip_score tensor(10.5848, device='cuda:0')

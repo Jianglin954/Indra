@@ -6,11 +6,11 @@ EOF
 
 k_samples=(5 10 30 50)  # 100 
 
-v_models=(vit)  #  convnext dinov2
-t_models=(bert) #  allroberta
+v_models=(vit convnext dinov2)  #  convnext dinov2
+t_models=(bert allroberta) #  allroberta
 
-b_data="coco"    # "nocaps"  "coco" 
-q_data="coco"    # "nocaps"  "coco"
+b_data="nocaps"    # "nocaps"  "coco" 
+q_data="nocaps"    # "nocaps"  "coco"
 
 base_command="python ./src/run_vlm.py --gpu 0"
 timestamp=$(date +"%Y%m%d_%H%M%S")
