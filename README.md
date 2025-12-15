@@ -47,16 +47,21 @@ bash officehome.sh
 
     @inproceedings{Jianglin2025,
       title={The Indra Representation Hypothesis},
-      author={Lu, Jianglin and Wang, Hailing and Yang, Kuo and Zhang, Yitian and Jenni, Simon and Fu, Yun},
-      booktitle={Advances in Neural Information Processing Systems},
-      year={2025}
+      author={Jianglin Lu and Hailing Wang and Kuo Yang and Yitian Zhang and Simon Jenni and Yun Fu},
+      booktitle={The Thirty-ninth Annual Conference on Neural Information Processing Systems},
+      year={2025},
+      url={https://openreview.net/forum?id=D2NR5Zq6PG}
     }
 
     @inproceedings{lu2025representation,
       title={Representation Potentials of Foundation Models for Multimodal Alignment: A Survey},
-      author={Lu, Jianglin and Wang, Hailing and Xu, Yi and Wang, Yizhou and Yang, Kuo and Fu, Yun},
+      author={Jianglin Lu and Hailing Wang and Yi Xu and Yizhou Wang and Kuo Yang and Yun Fu},
       booktitle={Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing},
-      year={2025}
+      year={2025},
+      publisher={Association for Computational Linguistics},
+      url={https://aclanthology.org/2025.emnlp-main.843/}
     }
+
+}
 
 
