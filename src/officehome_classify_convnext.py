@@ -60,7 +60,7 @@ def extract_features(dataloader):
     features_list, labels_list = [], []
     for imgs, labels in tqdm(dataloader, desc="Extracting features (ConvNeXt)"):
         imgs = imgs.to(device)
-        feats = model(imgs)  # [B, D]
+        feats = model(imgs)  
         features_list.append(feats.cpu().numpy())
         labels_list.append(labels.numpy())
     return np.concatenate(features_list), np.concatenate(labels_list)
@@ -88,9 +88,9 @@ for domain in domains:
             img_norm = torch.nn.functional.normalize(img, p=2, dim=1)
         
             if args.ori_dis == "Euclidean":
-                img_norm_cos_sim = torch.cdist(img_norm, img_norm, p=2)  # (N, D) @ (D, N) -> (N, N)
+                img_norm_cos_sim = torch.cdist(img_norm, img_norm, p=2) 
             elif args.ori_dis == "Cosine":
-                img_norm_cos_sim = img_norm @ img_norm.T  # (N, D) @ (D, N) -> (N, N)
+                img_norm_cos_sim = img_norm @ img_norm.T 
             
             X = img_norm_cos_sim.cpu().numpy()
     else:

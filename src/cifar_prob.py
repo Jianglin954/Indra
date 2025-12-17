@@ -13,7 +13,7 @@ import ipdb
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parent.parent  # project_root
+ROOT = Path(__file__).resolve().parent.parent 
 DATASETS = ROOT / "datasets"
 FEATURES = ROOT / "features"
 
@@ -117,16 +117,16 @@ def main():
     
         if args.ori_dis == "Euclidean":
             print("Using Euclidean distance...")
-            img_norm_cos_sim = torch.cdist(img_norm, img_norm, p=2)  # (N, D) @ (D, N) -> (N, N)
+            img_norm_cos_sim = torch.cdist(img_norm, img_norm, p=2)   
         elif args.ori_dis == "Cosine":
             print("Using Cosine similarity...")
-            img_norm_cos_sim = img_norm @ img_norm.T  # (N, D) @ (D, N) -> (N, N)
+            img_norm_cos_sim = img_norm @ img_norm.T   
         
 
         n_train = X_train.shape[0]
         n_test  = X_test.shape[0]
-        X_train = img_norm_cos_sim[:n_train, :]  # [n_train, n_total]
-        X_test  = img_norm_cos_sim[n_train:, :]  # [n_test,  n_total]   
+        X_train = img_norm_cos_sim[:n_train, :]   
+        X_test  = img_norm_cos_sim[n_train:, :]   
         
         X_train = X_train.cpu().numpy()
         X_test  = X_test.cpu().numpy() 

@@ -61,7 +61,7 @@ def extract_features(dataloader):
     features_list, labels_list = [], []
     for imgs, labels in tqdm(dataloader, desc="Extracting features"):
         imgs = imgs.to(device)
-        feats = model(imgs)  # shape: [B, 1024]
+        feats = model(imgs)  
         features_list.append(feats.cpu().numpy())
         labels_list.append(labels.numpy())
     return np.concatenate(features_list), np.concatenate(labels_list)
@@ -84,16 +84,15 @@ for domain in domains:
             X = X + np.random.normal(loc=0.0, scale=args.sigma, size=X.shape)
 
 
-        # test_our_features = True # False  True 
         if args.test_our_features:
             print("using our features.....")
             img = torch.from_numpy(X).to(device)
             img_norm = torch.nn.functional.normalize(img, p=2, dim=1)
         
             if args.ori_dis == "Euclidean":
-                img_norm_cos_sim = torch.cdist(img_norm, img_norm, p=2)  # (N, D) @ (D, N) -> (N, N)
+                img_norm_cos_sim = torch.cdist(img_norm, img_norm, p=2)  
             elif args.ori_dis == "Cosine":
-                img_norm_cos_sim = img_norm @ img_norm.T  # (N, D) @ (D, N) -> (N, N)
+                img_norm_cos_sim = img_norm @ img_norm.T 
             X = img_norm_cos_sim.cpu().numpy()
 
             

@@ -102,7 +102,7 @@ if __name__ == "__main__":
 
     clap_text = clap_source.detach().clone()
     clap_audio = clap_target.detach().clone()
-    clap_text_norm = torch.nn.functional.normalize(clap_text, p=2, dim=1) # L2 normalization on feature dimension
+    clap_text_norm = torch.nn.functional.normalize(clap_text, p=2, dim=1) 
     clap_audio_norm = torch.nn.functional.normalize(clap_audio, p=2, dim=1)
     
     t2i_atten_clip = clap_text_norm @ clap_audio_norm.T
@@ -155,11 +155,11 @@ if __name__ == "__main__":
     
     ### attention scores as features 
     if ori_dis == "Euclidean":
-        text_norm_cos_sim = torch.cdist(text_norm, text_norm, p=2)  # (N, D) @ (D, N) -> (N, N)
-        img_norm_cos_sim = torch.cdist(img_norm, img_norm, p=2)  # (N, D) @ (D, N) -> (N, N)
+        text_norm_cos_sim = torch.cdist(text_norm, text_norm, p=2)  
+        img_norm_cos_sim = torch.cdist(img_norm, img_norm, p=2)  
     elif ori_dis == "Cosine":
-        text_norm_cos_sim = text_norm @ text_norm.T  # (N, D) @ (D, N) -> (N, N)
-        img_norm_cos_sim = img_norm @ img_norm.T  # (N, D) @ (D, N) -> (N, N)
+        text_norm_cos_sim = text_norm @ text_norm.T  
+        img_norm_cos_sim = img_norm @ img_norm.T 
     
     
     t2i_dist_atten = torch.cdist(text_norm_cos_sim, img_norm_cos_sim, p=2)

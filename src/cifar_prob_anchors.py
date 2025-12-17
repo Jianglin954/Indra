@@ -104,7 +104,7 @@ def main():
     if args.test_our_features:
         print("using our features.....")
 
-        img = torch.cat([torch.from_numpy(X_train), torch.from_numpy(X_test)], dim=0)  # 使用训练集特征进行分类
+        img = torch.cat([torch.from_numpy(X_train), torch.from_numpy(X_test)], dim=0)
         img_norm = torch.nn.functional.normalize(img, p=2, dim=1)
 
         N, D = img_norm.shape
@@ -123,8 +123,8 @@ def main():
 
         n_train = X_train.shape[0]
         n_test  = X_test.shape[0]
-        X_train = img_norm_cos_sim[:n_train, :]  # [n_train, n_total]
-        X_test  = img_norm_cos_sim[n_train:, :]  # [n_test,  n_total]   
+        X_train = img_norm_cos_sim[:n_train, :]  
+        X_test  = img_norm_cos_sim[n_train:, :] 
         
         X_train = X_train.cpu().numpy()
         X_test  = X_test.cpu().numpy() 

@@ -12,7 +12,7 @@ import random
 import ipdb
 import argparse
 
-# CUDA_VISIBLE_DEVICES=5 python officehome_classify_vit.py 
+
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--test_our_features", action="store_true", help="Test using our features instead of model features")
@@ -87,9 +87,9 @@ for domain in domains:
             img_norm = torch.nn.functional.normalize(img, p=2, dim=1)
         
             if args.ori_dis == "Euclidean":
-                img_norm_cos_sim = torch.cdist(img_norm, img_norm, p=2)  # (N, D) @ (D, N) -> (N, N)
+                img_norm_cos_sim = torch.cdist(img_norm, img_norm, p=2)  
             elif args.ori_dis == "Cosine":
-                img_norm_cos_sim = img_norm @ img_norm.T  # (N, D) @ (D, N) -> (N, N)
+                img_norm_cos_sim = img_norm @ img_norm.T  
             
             X = img_norm_cos_sim.cpu().numpy()
     else:

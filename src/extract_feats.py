@@ -21,7 +21,6 @@ import ipdb
 COCO_ROOT = "./datasets/MS-COCO/val2017" 
 COCO_ANN = "./datasets/MS-COCO/annotations/captions_val2017.json"
 
-# NOCAPS_ROOT = "/shared/group/openimages/validation"
 NOCAPS_ROOT = "./datasets/NOCAPS/nocaps_validation_images"
 NOCAPS_ANN = "./datasets/NOCAPS/nocaps_val_4500_captions.json"
 
@@ -86,11 +85,10 @@ def get_model(model_name, device):
         model = timm.create_model(
             'vit_base_patch16_384.augreg_in1k',
             pretrained=True,
-            num_classes=0,  # remove classifier nn.Linear
+            num_classes=0,   
         ).to(device)
         model = model.eval()
         
-        # get model specific transforms (normalization, resize)
         data_config = timm.data.resolve_model_data_config(model)
         transform = timm.data.create_transform(**data_config, is_training=False)
         return model, transform
@@ -114,8 +112,7 @@ def run_model(model_name, model_transform, cap, device):
             inputs = inputs.to(device)
             with torch.no_grad():
                 outputs = model(**inputs)
-            image_representation = outputs.last_hidden_state[:, 1:, :].mean(dim=1).detach().cpu()[0]    # 去掉 cls token
-            # image_representation = outputs.last_hidden_state.mean(dim=1).detach().cpu()[0]  # [1, 257, 1024] 去掉 cls token
+            image_representation = outputs.last_hidden_state[:, 1:, :].mean(dim=1).detach().cpu()[0]   
             image_representations.append(image_representation)      
         image_representations_tensor = torch.stack(image_representations)
         torch.save(image_representations_tensor, f'./features/{dataset}_{model_name}_img.pt')
@@ -126,7 +123,7 @@ def run_model(model_name, model_transform, cap, device):
         for img, target in tqdm(cap):
             input = transform(img).unsqueeze(0).to(device)
             with torch.no_grad():
-                output = model(input)[0]  # output is (batch_size, num_features) shaped tensor
+                output = model(input)[0] 
             image_representations.append(output)
         image_representations_tensor = torch.stack(image_representations)
         torch.save(image_representations_tensor, f'./features/{dataset}_{model_name}_img.pt')
@@ -140,7 +137,6 @@ def run_model(model_name, model_transform, cap, device):
             inputs = inputs.to(device)
             with torch.no_grad():
                 outputs = model.convnext(**inputs)
-            #print(outputs.last_hidden_state.shape)
             image_representation = outputs.last_hidden_state.reshape(1, 1024, -1).mean(2).detach().cpu()[0]
             image_representation = image_representation / np.linalg.norm(image_representation, axis=0, keepdims=True)
             image_representations.append(image_representation)
@@ -161,7 +157,6 @@ def run_model(model_name, model_transform, cap, device):
             text_representation = outputs.text_embeds.detach().cpu().squeeze()
             if text_representation.shape[0] > 5:
                 text_representation = text_representation[:5]
-            # text_representation = text_representation.mean(dim=0).squeeze()
             image_representation = outputs.image_embeds.detach().cpu().squeeze()
         
             text_representations.append(text_representation)
@@ -173,7 +168,7 @@ def run_model(model_name, model_transform, cap, device):
         text = text_representations_tensor.detach().clone().reshape(-1, text_representations_tensor.shape[2]) 
         img = image_representations_tensor.detach().clone()
         
-        text_norm = torch.nn.functional.normalize(text, p=2, dim=1) # L2 normalization on feature dimension
+        text_norm = torch.nn.functional.normalize(text, p=2, dim=1) 
         img_norm = torch.nn.functional.normalize(img, p=2, dim=1)
         t2i_att = text_norm @ img_norm.T
         i2t_att = img_norm @ text_norm.T
@@ -190,10 +185,9 @@ def run_model(model_name, model_transform, cap, device):
             tokenized_inputs = tokenizer(target, padding="max_length",  truncation=True, max_length=512, add_special_tokens=False, return_tensors="pt").to(device)
             with torch.no_grad():
                 output = model(**tokenized_inputs)                 
-            # output.last_hidden_state  # [5, 512, 1024]
-            attention_mask = tokenized_inputs["attention_mask"].unsqueeze(-1)  # [5, 512, 1]
+            attention_mask = tokenized_inputs["attention_mask"].unsqueeze(-1) 
             token_embeddings = (output.last_hidden_state * attention_mask).sum(dim=1) / attention_mask.sum(dim=1)
-            text_representation = torch.Tensor(token_embeddings.mean(dim=0))    # average 5 sentences
+            text_representation = torch.Tensor(token_embeddings.mean(dim=0))   
             text_representations.append(text_representation)
             
         text_representations_tensor = torch.stack(text_representations)
@@ -205,7 +199,7 @@ def run_model(model_name, model_transform, cap, device):
 
         for img, target in tqdm(cap):
             with torch.no_grad():
-                output = language_model.encode(target)                  # (5, 1024)
+                output = language_model.encode(target)                 
             text_representation = torch.Tensor(output)
             text_representation = text_representation.mean(dim=0)
             text_representations.append(text_representation)
