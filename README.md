@@ -1,5 +1,5 @@
-# The Indra Representation Hypothesis (NeurIPS 2025)
-Code for the NeurIPS 2025 paper [The Indra Representation Hypothesis](https://openreview.net/pdf/7a234a154428f618d6232f1a153278475a2e3b00.pdf).
+# The Indra Representation Hypothesis for Multimodal Alignment (NeurIPS 2025)
+Code for the NeurIPS 2025 paper [The Indra Representation Hypothesis for Multimodal Alignment](https://openreview.net/pdf/7a234a154428f618d6232f1a153278475a2e3b00.pdf).
 
 
 <img src="./figs/fig1.png">
@@ -46,7 +46,7 @@ bash officehome.sh
 # References
 
     @inproceedings{Jianglin2025,
-      title={The Indra Representation Hypothesis},
+      title={The Indra Representation Hypothesis for Multimodal Alignment},
       author={Jianglin Lu and Hailing Wang and Kuo Yang and Yitian Zhang and Simon Jenni and Yun Fu},
       booktitle={The Thirty-ninth Annual Conference on Neural Information Processing Systems},
       year={2025},
