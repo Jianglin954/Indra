@@ -1,5 +1,5 @@
 # The Indra Representation Hypothesis for Multimodal Alignment (NeurIPS 2025)
-Code for the NeurIPS 2025 paper [The Indra Representation Hypothesis for Multimodal Alignment](https://openreview.net/pdf/7a234a154428f618d6232f1a153278475a2e3b00.pdf).
+Code for the NeurIPS 2025 paper [The Indra Representation Hypothesis for Multimodal Alignment](https://openreview.net/forum?id=D2NR5Zq6PG).
 
 
 <img src="./figs/fig1.png">
